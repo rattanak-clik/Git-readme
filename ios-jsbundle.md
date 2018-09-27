@@ -3,10 +3,10 @@
 First generate the jsbundle file:
 
 ```
-react-native bundle --entry-file='index.js' --bundle-output='./ios/UdemyFastlane/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios'
+react-native bundle --entry-file='index.js' --bundle-output='./ios/[PROJECT_DIRECTORY]/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios'
 ```
 
-Then in [ios/UdemyFastlane/AppDelegate.m](ios/UdemyFastlane/AppDelegate.m) comment out the line that loads the jsbundle via http:
+Then in ios/[PROJECT_DIRECTORY]/AppDelegate.m comment out the line that loads the jsbundle via http:
 
 ```
 jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
